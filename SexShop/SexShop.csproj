@@ -17,6 +17,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\SexShop.DataAccessLayer\SexShop.DataAccessLayer.csproj" />
+      <ProjectReference Include="..\SexShop.Service\SexShop.Service.csproj" />
     </ItemGroup>
 
     <ItemGroup>

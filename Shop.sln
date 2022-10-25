@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SexShop.Domain", "SexShop.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SexShop.DataAccessLayer", "SexShop.DataAccessLayer\SexShop.DataAccessLayer.csproj", "{7A852CC3-29AA-4B63-B1F7-E558238892CB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{2722C517-6875-46E4-99AC-5B9B4292244F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SexShop.Service", "SexShop.Service\SexShop.Service.csproj", "{84047A2A-9835-4DDB-B017-37EF0EA8D569}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +32,14 @@ Global
 		{7A852CC3-29AA-4B63-B1F7-E558238892CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A852CC3-29AA-4B63-B1F7-E558238892CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A852CC3-29AA-4B63-B1F7-E558238892CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84047A2A-9835-4DDB-B017-37EF0EA8D569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84047A2A-9835-4DDB-B017-37EF0EA8D569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84047A2A-9835-4DDB-B017-37EF0EA8D569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84047A2A-9835-4DDB-B017-37EF0EA8D569}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{49A3896E-820A-41E4-9F6B-B4F4DBBB945A} = {59DEBCB2-97A9-4518-83E9-ABC543DDF799}
 		{7A852CC3-29AA-4B63-B1F7-E558238892CB} = {02D7F940-E8D4-4616-9F9A-F275BDFFB7EF}
+		{84047A2A-9835-4DDB-B017-37EF0EA8D569} = {2722C517-6875-46E4-99AC-5B9B4292244F}
 	EndGlobalSection
 EndGlobal
