@@ -4,5 +4,5 @@ namespace SexShop.DataAccessLayer.Interfaces;
 
 public interface IProductRepository : IBaseRepository<Product>
 {
-    public Product GetByName(string name);
+    public Task<Product?> GetByName(string name);
 }

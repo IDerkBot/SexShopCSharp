@@ -4,11 +4,11 @@ namespace SexShop.DataAccessLayer.Interfaces;
 
 public interface IBaseRepository<T>
 {
-    public bool Create(T entity);
+    public Task<bool> Create(T entity);
 
-    public T Get(int id);
+    public Task<T?> Get(int id);
 
-    public Task<List<Product>> Select();
+    public Task<List<T?>> Select();
 
-    public bool Delete(T entity);
+    public Task<bool> Delete(T entity);
 }
