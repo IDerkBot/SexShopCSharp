@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SexShop", "SexShop\SexShop.csproj", "{C7CE951A-2E03-47C7-9462-30EFA55800D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccessLayer", "DataAccessLayer", "{02D7F940-E8D4-4616-9F9A-F275BDFFB7EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{59DEBCB2-97A9-4518-83E9-ABC543DDF799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SexShop.Domain", "SexShop.Domain\SexShop.Domain.csproj", "{49A3896E-820A-41E4-9F6B-B4F4DBBB945A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SexShop.DataAccessLayer", "SexShop.DataAccessLayer\SexShop.DataAccessLayer.csproj", "{7A852CC3-29AA-4B63-B1F7-E558238892CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7CE951A-2E03-47C7-9462-30EFA55800D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7CE951A-2E03-47C7-9462-30EFA55800D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7CE951A-2E03-47C7-9462-30EFA55800D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7CE951A-2E03-47C7-9462-30EFA55800D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A3896E-820A-41E4-9F6B-B4F4DBBB945A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A3896E-820A-41E4-9F6B-B4F4DBBB945A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A3896E-820A-41E4-9F6B-B4F4DBBB945A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A3896E-820A-41E4-9F6B-B4F4DBBB945A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A852CC3-29AA-4B63-B1F7-E558238892CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A852CC3-29AA-4B63-B1F7-E558238892CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A852CC3-29AA-4B63-B1F7-E558238892CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A852CC3-29AA-4B63-B1F7-E558238892CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{49A3896E-820A-41E4-9F6B-B4F4DBBB945A} = {59DEBCB2-97A9-4518-83E9-ABC543DDF799}
+		{7A852CC3-29AA-4B63-B1F7-E558238892CB} = {02D7F940-E8D4-4616-9F9A-F275BDFFB7EF}
+	EndGlobalSection
+EndGlobal
