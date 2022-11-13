@@ -6,14 +6,12 @@ namespace SexShop.DataAccessLayer.Interfaces;
 /// <summary>
 /// 
 /// </summary>
-public interface IProductRepository : IBaseRepository<Product>
+public interface IColorRepository : IBaseRepository<Color>
 {
     /// <summary>
     /// 
     /// </summary>
     /// <param name="name"></param>
     /// <returns></returns>
-    Task<Product?> GetByName(string name);
-
-    Task AddImage(Product product, Image image);
+    Task<Color?> GetByName(string name);
 }
