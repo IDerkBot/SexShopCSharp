@@ -1,0 +1,110 @@
+﻿@using SexShop.Domain.Entity
+@model IEnumerable<Product>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="container">
+<nav class="navbar navbar-expand-lg nvabar-dark lighten-3 mt-3 mb-5">
+    <span class="navbar-brand">Категории:</span>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="#catNav" data-bs-target=".navbar-collapse" aria-controls="catNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="catNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link"></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="text-center mb-4">
+    <div class="row wow fadeIn">
+        @foreach (var product in Model)
+        {
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <div class="view overlay">
+                        <img class="card-img-top" style="max-height: 300px; object-fit: cover" src="@product.Images.First().Link" alt="">
+                        <a href="@Url.Action("product", new { id = product.Id })">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="" class="text-secondary">
+                            @* <h5>@product.Category.Name</h5> *@
+                        </a>
+                        <h5>
+                            <strong>
+                                <a href="#" class="text-black">
+                                    @product.Name
+                                    @* <span class="badge rounded-pill bg-danger">New</span> *@
+                                </a>
+                            </strong>
+                        </h5>
+                        <h5>
+                            @product.Manufacturer?.Name
+                        </h5>
+                        <h4 class="font-weight-bold blue-text">
+                            <strong>@product.Price</strong>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<nav class="d-flex justify-content-center wow fadeIn">
+    <ul class="pagination pg-blue">
+        <li class="page-item disabled">
+            <a href="" class="page-link" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="page-item active">
+            <a href="" class="page-link" aria-label="Previous">
+                <span aria-hidden="true">1</span>
+            </a>
+        </li>
+        <li class="page-item">
+            <a href="" class="page-link" aria-label="Previous">
+                <span aria-hidden="true">2</span>
+            </a>
+        </li>
+        <li class="page-item">
+            <a href="" class="page-link" aria-label="Previous">
+                <span aria-hidden="true">3</span>
+            </a>
+        </li>
+        <li class="page-item">
+            <a href="" class="page-link" aria-label="Previous">
+                <span aria-hidden="true">4</span>
+            </a>
+        </li>
+        <li class="page-item">
+            <a href="" class="page-link" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+</div>

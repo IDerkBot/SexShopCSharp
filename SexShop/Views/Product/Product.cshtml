@@ -1,0 +1,150 @@
+﻿@using SexShop.Domain.Entity
+@using Microsoft.AspNetCore.Mvc.Razor
+@model Product
+
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "_Layout";
+}
+
+<div class="container">
+    @* <div class="row justify-content-center"> *@
+    @*     $1$ <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-11 col offset-xl-1 offset-lg-1"> #1# *@
+    @*     $1$     <div class=""> #1# *@
+    @*     $1$         <a> #1# *@
+    @*     $1$             <img src="/image/girl.png" alt=""> #1# *@
+    @*     $1$         </a> #1# *@
+    @*     $1$         <a> #1# *@
+    @*     $1$             <img src="/image/girl.png" alt=""> #1# *@
+    @*     $1$         </a> #1# *@
+    @*     $1$         <a> #1# *@
+    @*     $1$             <img src="/image/girl.png" alt=""> #1# *@
+    @*     $1$         </a> #1# *@
+    @*     $1$         <a> #1# *@
+    @*     $1$             <img src="/image/girl.png" alt=""> #1# *@
+    @*     $1$         </a> #1# *@
+    @*     $1$         <a> #1# *@
+    @*     $1$             <img src="/image/girl.png" alt=""> #1# *@
+    @*     $1$         </a> #1# *@
+    @*     $1$     </div> #1# *@
+    @*     $1$ </div> #1# *@
+    @* </div> *@
+    <div class="row">
+        @* Изображения *@
+        <div class="col-xl-6 col-lg-7 col-md-6 col-sm-12">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @for (int i = 0; i < Model.Images.Count; i++)
+                    {
+                        @if (i == 0)
+                        {
+                            <div class="carousel-item active">
+                                <img src="@Model.Images.ToList()[i].Link" class="d-block w-100 product-image" alt="...">
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="carousel-item">
+                                <img src="@Model.Images.ToList()[i].Link" class="d-block w-100 product-image" alt="...">
+                            </div>
+                        }
+                    }
+                </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon text-black" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon text-black" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+              </button>
+            </div>
+        </div>
+        @* Информация о товаре *@
+        <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
+            <div class="product-wrapper product-wrapper-2 pt-60">
+                <div class="product-main-info">
+                    @* Название товара *@
+                    <h6>@Model.Name</h6>
+
+                    @* Рейтинг *@
+                    <ul class="rating list-unstyled d-flex pl-0 pt-10 pb-10">
+                        <li>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+
+                    @* Количество отзывов (наверное лучше удалить) *@
+                    <div class="product-interested pb-20">
+                        <span class="pr-10">Отзывы: </span>
+                        <span>564</span>
+                    </div>
+
+                    @* Стоимость *@
+                    <div class="price d-inline-block pb-25">
+                        <span>@Model.Price Руб.</span>
+                        @* <del>999 Руб.</del> *@
+                    </div>
+
+                    @* Доступность *@
+                    <div class="accessibility pl-20">
+                        <span>Доступность : <span class="pl-5">В наличии</span> </span>
+                    </div>
+
+                    @* Количество *@
+                    <div class="product-number d-flex pb-30">
+                        <div class="quty">
+                            <span class="pr-10">Количество:</span>
+                            <input class="form-control" type="number" min="0" max="10" value="1">
+                        </div>
+                    </div>
+                    <hr>
+
+                    @* Кнопки *@
+                    <div class="cart-view d-flex">
+                        <div class="cart">
+                            <a href="#" class="btn btn-primary" tabindex="0"><img src="" alt="">Добавить в корзину</a>
+                        </div>
+                        <a class="btn btn-danger mx-1" href="#" tabindex="0">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-dark" href="">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 col-12 product-details">
+            <ul class="nav nav-tabs" id="detailTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="True">Описание</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="False">Характеристики</button>
+                </li>
+                @* <li class="nav-item" role="presentation"> *@
+                @*     <button class="nav-link" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="True">Описание</button> *@
+                @* </li> *@
+            </ul>
+            <div class="tab-content mt-2" id="detailTabContent">
+              <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">@Model.Description</div>
+                <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
+                    @Model.SubCategory?.Name
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
