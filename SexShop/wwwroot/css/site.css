@@ -16,3 +16,8 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.product-image{
+  height: 300px;
+  object-fit: contain;
+}
